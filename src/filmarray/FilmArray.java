@@ -33,7 +33,15 @@ public class FilmArray
 	for (int i = 0; i < FilmNames.length; i++) 
         { //runs through the array of film names 
 			System.out.print("Movie " + (FilmNames[i]) + " grossed (in millions of dollars): ");
-		        GrossArray[i] = scan.nextInt();//gives each film a corresponding gross value
+                        try
+                        { //blocks answers that aren't integers
+                            GrossArray[i] = Integer.parseInt(scan.nextLine());
+                        }
+                        catch(IllegalArgumentException ex) 
+                        {
+                            System.out.println("Nope, use a number, and a sensible one at that");
+                            films();
+                        }
                         total = total + GrossArray[i];//adds to the total as input is given
         }
                
