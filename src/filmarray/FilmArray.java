@@ -64,6 +64,8 @@ public class FilmArray
             } 
         } //end for loop
         System.out.println("Highest grossing movie is: " + FilmNames[m]);// gives us the film with the highest gross
+        System.exit(0);
+        
     }//end method getMax
         
 }//end class
